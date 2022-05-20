@@ -12,6 +12,8 @@
   <!-- Favicons -->
   <link href="assets/img/faviconafter3.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +52,7 @@
       <div class="table-cell">
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">I am Chrysostomos Koumides</h1>
+          <h1 class="hero-title mb-4">I am Chrysostomos</h1>
           <p class="hero-subtitle"><span class="typed"
               data-typed-items="Student, Cypriot, Passionate about Tech"></span></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
@@ -81,50 +83,26 @@
                     </h5>
                   </div>
                   <p class="lead">
-                    I was born in a village just outside of Limassol, Cyprus, where I grew up with my two brother and two sisters.
-                    Growing up, I have realized that i had the urge to develop some skill that i will love to put to the maximum.
-                    When, I got into the Aristotle University of Thessaloniki, in Electrical and Computer Engineering department,
-                    as i was straving through to learn, practice and master new Technologies that will enhance the experience of the users
+                    I am Chrysostomos Koumides born in a village just outside of Limassol, Cyprus, where I grew up with my two brother and
+                    two sisters.
+                    Growing up, I have realized that i had the urge to develop some skill that i will love to put to the
+                    maximum.
+                    When, I got into the Aristotle University of Thessaloniki, in Electrical and Computer Engineering
+                    department,
+                    as i was straving through to learn, practice and master new Technologies that will enhance the
+                    experience of the users
                     and make easier the interaction with the fast advancing Technologies!
                   </p>
                   <!-- <p class="lead">
                     I’m experienced in HTML and CSS 3, Bootstrap 5, JavaScript, Node.js, jQuery, MongoDB, Express,
                     Heroku
                   </p> -->
-                  <a id="CV" class="btn btn-lg btn-warning" target="_blank" href="https://drive.google.com/file/d/1__KzQdnkeZeWU8mXEbBxAvsFg2V-0JjT/view?usp=sharing" role="button">Download CV</a>
+                  <a id="CV" class="btn btn-lg btn-warning" target="_blank"
+                    href="https://drive.google.com/file/d/1zguI-jHJ_qeX526Om6f3udT5jOUsj81M/view?usp=sharing"
+                    role="button">Download CV</a>
                 </div>
               </div>
             </div>
-            <!--
-                  <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>HTML</span> <span class="pull-right">65%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="85"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>CSS3</span> <span class="pull-right">55%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">70%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="50"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>Node.js</span> <span class="pull-right">60%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>Express-MongoDB-Heroku</span> <span class="pull-right">50%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>-->
-
           </div>
         </div>
       </div>
@@ -213,43 +191,41 @@
                 <div class="col-md-6">
                   <div class="title-box-2">
                     <h5 class="title-left">
-                      Send Message Us
+                      Send Message
                     </h5>
                   </div>
                   <div>
-                    <form action="mailto: chyrkoum@gmail.com?" method="GET">
+                    <form action="#">
                       <div class="row">
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                              required>
+                            <input class="form-control" id="name" placeholder="Your name" name="name" type="text"
+                              autofocus >
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="email" class="form-control" name=" email" id="email"
+                              placeholder="Your Email Address"  >
                           </div>
                         </div>
                         <!-- <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="email" class="form-control" name=" email" id="email" placeholder="Your Email"
-                              required>
+                            <input type="text" class="form-control" name="subject" id="subject"
+                              placeholder="Type your subject line"  >
                           </div>
                         </div> -->
-                        <div class="col-md-12 mb-3">
-                          <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                              required>
-                          </div>
-                        </div>
                         <div class="col-md-12">
                           <div class="form-group">
-                            <textarea class="form-control" name="body" rows="5" placeholder="Message"
-                              required></textarea>
+                            <textarea id="message" class="form-control" name="body" rows="5"
+                              placeholder="Type your Message Details Here..."  ></textarea>
                           </div>
                         </div>
                         <div class="col-md-12 text-center my-3">
-                          <!-- <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>-->
                         </div>
-                        <div class="col-md-12 text-center">
-                          <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                        <div class="col-md-12 text-center button-area">
+                          <button type="submit" name="submit" id="contact-submit" data-submit="...Sending" class="button button-a button-big button-rouded">Send Message</button>
+                          <span></span>
                         </div>
                       </div>
                     </form>
@@ -321,6 +297,9 @@
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
+
+  <!-- For Email Validatation -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
