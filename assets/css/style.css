@@ -83,6 +83,7 @@ a:hover {
 	background-size: cover;
 	background-position: center center;
 }
+
 @media (max-width: 1024px) {
 	.bg-image {
 		background-attachment: scroll;
@@ -705,7 +706,6 @@ a:hover {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-
 .hero {
 	height: 100vh;
 	position: relative;
@@ -815,9 +815,7 @@ a:hover {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-#work {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("/assets/img/background.jpg");
-}
+
 
 .work-box {
 	margin-bottom: 3rem;
