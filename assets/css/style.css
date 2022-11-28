@@ -15,6 +15,7 @@ h6 {
 	color: #1e1e1e;
 }
 
+
 a {
 	color: #1e1e1e;
 	text-decoration: none;
@@ -29,6 +30,12 @@ a:hover {
 .p-r {
 	position: relative;
 }
+.lead{
+	font-family:'Outfit', sans-serif;
+	font-weight: bolder;
+	font-size: large;
+}
+
 
 .color-a {
 	text-decoration: none;
@@ -259,56 +266,6 @@ a:hover {
 	text-align: center;
 	box-shadow: 0 0 0 10px #c9aa0c;
 	display: block;
-}
-
-/*------/ Owl Carousel /------*/
-.owl-theme .owl-dots {
-	text-align: center;
-	margin-top: 18px;
-}
-.owl-theme .owl-dots .owl-dot {
-	display: inline-block;
-}
-.owl-theme .owl-dots .owl-dot span {
-	width: 18px;
-	height: 7px;
-	margin: 5px 5px;
-	background: #cde1f8;
-	border: 0px solid #cde1f8;
-	display: block;
-	transition: all 0.6s ease-in-out;
-	cursor: pointer;
-}
-.owl-theme .owl-dots .owl-dot:hover span {
-	background-color: #cde1f8;
-}
-.owl-theme .owl-dots .owl-dot.active span {
-	background-color: #1b1b1b;
-	width: 25px;
-}
-
-/*--/ Scrolltop s /--*/
-.scrolltop-mf {
-	position: relative;
-	display: none;
-}
-.scrolltop-mf span {
-	z-index: 999;
-	position: fixed;
-	width: 42px;
-	height: 42px;
-	background-color: #c9aa0c;
-	opacity: 0.7;
-	font-size: 1.6rem;
-	line-height: 1.5;
-	text-align: center;
-	color: #fff;
-	top: auto;
-	left: auto;
-	right: 30px;
-	bottom: 50px;
-	cursor: pointer;
-	border-radius: 50%;
 }
 
 /*--------------------------------------------------------------
@@ -941,95 +898,6 @@ a:hover {
 	}
 }
 
-.php-email-form .sent-message {
-	display: none;
-	color: #fff;
-	background: #18d26e;
-	text-align: center;
-	padding: 15px;
-	font-weight: 600;
-}
-.php-email-form .loading {
-	display: none;
-	background: #fff;
-	text-align: center;
-	padding: 15px;
-}
-.php-email-form .loading:before {
-	content: "";
-	display: inline-block;
-	border-radius: 50%;
-	width: 24px;
-	height: 24px;
-	margin: 0 10px -6px 0;
-	border: 3px solid #18d26e;
-	border-top-color: #eee;
-	-webkit-animation: animate-loading 1s linear infinite;
-	animation: animate-loading 1s linear infinite;
-}
-.php-email-form input,
-.php-email-form textarea {
-	border-radius: 0;
-	box-shadow: none;
-	font-size: 14px;
-}
-.php-email-form input:focus,
-.php-email-form textarea:focus {
-	border-color: #c9aa0c;
-}
-.php-email-form input {
-	padding: 10px 15px;
-}
-.php-email-form textarea {
-	padding: 12px 15px;
-	margin-bottom: 0;
-}
-.php-email-form button[type=submit] {
-	background: #c9aa0c;
-	border: 0;
-	padding: 10px 24px;
-	color: #fff;
-	transition: 0.4s;
-}
-.php-email-form button[type=submit]:hover {
-	background: #3393ff;
-}
-
-.success {
-	color: green;
-	font-weight: 700;
-	padding: 5px;
-	text-align: center;
-}
-
-.error {
-	color: red;
-	font-weight: 700;
-	padding: 5px;
-	text-align: center;
-}
-
-.error-border {
-	border-bottom: 1px solid red;
-}
-
-@-webkit-keyframes animate-loading {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes animate-loading {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
 /*--------------------------------------------------------------
 # Get in Touch
 --------------------------------------------------------------*/
