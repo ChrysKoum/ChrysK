@@ -32,8 +32,10 @@ a:hover {
 }
 .lead{
 	font-family:'Outfit', sans-serif;
-	font-weight: bolder;
-	font-size: large;
+	font-weight: 400;
+    font-size: 1.06rem;
+    color: black;
+    text-align: justify;
 }
 
 
@@ -735,6 +737,56 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
+# Scroll-down
+--------------------------------------------------------------*/
+.scroll-down {
+  height: 50px;
+  width: 30px;
+  border: 2px solid #c9aa0c;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid #c9aa0c;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.3s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
 
@@ -746,7 +798,7 @@ a:hover {
 	margin-bottom: 2rem;
 }
 .about-mf .about-img img {
-	margin-left: 10px;
+	margin-left: 10px;margin-top: 4rem;
 }
 @media (min-width: 767px) {
 	.about-mf .box-pl2 {
