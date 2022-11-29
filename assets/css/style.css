@@ -15,12 +15,12 @@ h6 {
 	color: #1e1e1e;
 }
 
-
 a {
 	color: #1e1e1e;
 	text-decoration: none;
 	transition: all 0.5s ease-in-out;
 }
+
 a:hover {
 	color: #c9aa0c;
 	text-decoration: none;
@@ -30,6 +30,7 @@ a:hover {
 .p-r {
 	position: relative;
 }
+
 .lead{
 	font-family:'Outfit', sans-serif;
 	font-weight: 400;
@@ -37,7 +38,6 @@ a:hover {
     color: black;
     text-align: justify;
 }
-
 
 .color-a {
 	text-decoration: none;
@@ -168,7 +168,7 @@ a:hover {
 }
 
 .line-mf {
-	width: 40px;
+	width: 100px;
 	height: 5px;
 	background-color: #c9aa0c;
 	margin: 0 auto;
@@ -767,6 +767,13 @@ a:hover {
   top: 30%;
   animation-delay: 0.3s;
   /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+@media (max-width: 426px) {
+	.scroll-down {
+		left: 46.5%;
+  		bottom: 9%;
+	}
 }
 
 @keyframes scroll-down {
