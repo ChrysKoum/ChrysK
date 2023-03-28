@@ -1,2 +1,2 @@
 # ChrysK
-This is My Personal Website. You will find about my Projects and many more... Cooming Soon
+This is My Personal Website. You will find about my Projects and many more...
