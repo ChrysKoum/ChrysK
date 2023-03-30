@@ -2,17 +2,13 @@
 # General
 --------------------------------------------------------------*/
 body {
-	background-color: rgb(22, 22, 21);
-	color: #4e4e4e;
+	color: black;
+	margin: 0;
+	padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #1e1e1e;
+.logo{
+	display: block;
 }
 
 a {
