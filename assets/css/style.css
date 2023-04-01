@@ -2,6 +2,7 @@
 # General
 --------------------------------------------------------------*/
 body {
+	background-color: rgb(22, 22, 21);
 	color: black;
 	margin: 0;
 	padding: 0;
@@ -60,7 +61,7 @@ a:hover {
 .box-shadow-a,
 .button:hover {
 	text-decoration: none;
-	box-shadow: 0 0 0 4px #cde1f8;
+	box-shadow: 0 0 0 4px #fff4c0;
 }
 
 .display-5 {
@@ -228,7 +229,7 @@ a:hover {
 .socials .ico-circle:hover {
 	background-color: #c9aa0c;
 	color: #fff;
-	box-shadow: 0 0 0 3px #cde1f8;
+	box-shadow: 0 0 0 3px #eee098;
 	transition: all 500ms ease;
 }
 
@@ -287,9 +288,13 @@ a:hover {
 	color: #fff;
 	line-height: 0;
 }
+.back-to-top i:hover{
+	color: #edc910;
+}
+
 .back-to-top:hover {
-	background: #edc910;
-	color: #fff;
+	background: black;
+	color: #edc910;
 }
 .back-to-top.active {
 	visibility: visible;
@@ -377,7 +382,7 @@ a:hover {
 	text-decoration: none;
 	background-color: #c9aa0c;
 	color: #fff;
-	border-color: #cde1f8;
+	border-color: #eee098;
 }
 
 .button-big {
@@ -723,10 +728,10 @@ a:hover {
 	color: #c9aa0c;
 }
 .hero-single .breadcrumb .breadcrumb-item:before {
-	color: #cde1f8;
+	color: #eee098;
 }
 .hero-single .breadcrumb .breadcrumb-item.active {
-	color: #cde1f8;
+	color: #eee098;
 }
 .hero-single .breadcrumb a {
 	color: #fff;
@@ -810,7 +815,7 @@ a:hover {
 	color: #4e4e4e;
 }
 .skill-mf .progress {
-	background-color: #cde1f8;
+	background-color: #eee098;
 	margin: 0.5rem 0 1.2rem 0;
 	border-radius: 0;
 	height: 0.7rem;
@@ -832,16 +837,31 @@ a:hover {
 	background-color: #fff;
 }
 .work-box:hover img {
-	transform: scale(1.3);
+	transform: scale(1.1);
 }
 
 .work-box {
-	border: solid 0px white;
+	border: solid 0px #d3ba42;
 	transition: border-width 0.6s linear;
 }
 
+.form-control{
+    box-shadow:none;
+    border: solid 1px #d3ba42;
+    width:100%;
+}
+
+.form-control::placeholder{
+    color:#aaa;
+}
+
+.form-control:focus{
+    box-shadow:none;
+    border: solid 3px #d3ba42;
+}
+
 .work-box:hover {
-	border-width: 5px;
+	border-width: 4px;
 }
 
 .work-img {
@@ -853,14 +873,15 @@ a:hover {
 }
 
 .work-content {
-	padding: 2rem 3% 1rem 4%;
+    background-color: #d3ba42;
+    padding: 1rem 0 1rem 1rem;
 }
 .work-content .w-more {
 	color: #4e4e4e;
 	font-size: 0.8rem;
 }
 .work-content .w-more .w-ctegory {
-	color: #c9aa0c;
+	    color: black;
 }
 .work-content .w-like {
 	font-size: 2.5rem;
