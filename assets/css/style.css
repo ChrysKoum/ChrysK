@@ -373,8 +373,8 @@ a:hover {
 	outline: 0;
 }
 .button:hover {
-	background-color: #edc910;
-	color: #fff;
+	background-color: black;
+	color: #edc910;
 	transition: all 500ms ease;
 }
 
