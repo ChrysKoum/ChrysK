@@ -221,15 +221,20 @@ a:hover {
 	width: 40px;
 	font-size: 1.2rem;
 	border-radius: 50%;
-	line-height: 1.6;
+	line-height: 2;
 	margin: 0 15px 0 0;
 	box-shadow: 0 0 0 3px #c9aa0c;
 	transition: all 500ms ease;
 }
+
+.socials .ico-circle:first-child {
+    padding-left: 1px;
+}
+
 .socials .ico-circle:hover {
 	background-color: #c9aa0c;
 	color: #fff;
-	box-shadow: 0 0 0 3px #eee098;
+	box-shadow: 0 0 0 3px white;
 	transition: all 500ms ease;
 }
 
