@@ -231,10 +231,15 @@ a:hover {
     padding-left: 1px;
 }
 
+#ulsocials li a[href*="github.com"] .ico-circle {
+    padding-right: 1.5px;
+}
+
 .socials .ico-circle:hover {
 	background-color: #c9aa0c;
 	color: #fff;
-	box-shadow: 0 0 0 3px white;
+
+	box-shadow: 0 0 0 3px black;
 	transition: all 500ms ease;
 }
 
@@ -351,15 +356,6 @@ a:hover {
 }
 /*------/ Button /------*/
 
-#CV {
-	color: white;
-	background-color: #c9aa0c;
-	border-color: #c9aa0c;
-}
-#CV:hover {
-	background-color: #e8c40f;
-}
-
 .button {
 	display: inline-block;
 	padding: 0.3rem 0.6rem;
@@ -406,6 +402,106 @@ a:hover {
 	border-radius: 0.3rem;
 }
 
+/* CV Button */
+#CV,
+#CV:after {
+width: 150px;
+height: 56px;
+line-height: 42px;
+font-size: 20px;
+font-family: 'Bebas Neue', sans-serif;
+background: linear-gradient(45deg, transparent 5%, #c9aa0c 5%);
+border: 0;
+color: #fff;
+letter-spacing: 3px;
+box-shadow: 6px 0px 0px black;
+outline: transparent;
+position: relative;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
+
+#CV:after {
+--slice-0: inset(50% 50% 50% 50%);
+--slice-1: inset(80% -6px 0 0);
+--slice-2: inset(50% -6px 30% 0);
+--slice-3: inset(10% -6px 85% 0);
+--slice-4: inset(40% -6px 43% 0);
+--slice-5: inset(80% -6px 5% 0);
+
+content: 'Download CV';
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(45deg, transparent 3%, black 3%, black 5%, #c9aa0c 5%);
+text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px black;
+clip-path: var(--slice-0);
+}
+
+#CV:hover:after {
+animation: 1s glitch;
+animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+0% {
+clip-path: var(--slice-1);
+transform: translate(-20px, -10px);
+}
+10% {
+clip-path: var(--slice-3);
+transform: translate(10px, 10px);
+}
+20% {
+clip-path: var(--slice-1);
+transform: translate(-10px, 10px);
+}
+30% {
+clip-path: var(--slice-3);
+transform: translate(0px, 5px);
+}
+40% {
+clip-path: var(--slice-2);
+transform: translate(-5px, 0px);
+}
+50% {
+clip-path: var(--slice-3);
+transform: translate(5px, 0px);
+}
+60% {
+clip-path: var(--slice-4);
+transform: translate(5px, 10px);
+}
+70% {
+clip-path: var(--slice-2);
+transform: translate(-10px, 10px);
+}
+80% {
+clip-path: var(--slice-5);
+transform: translate(20px, -10px);
+}
+90% {
+clip-path: var(--slice-1);
+transform: translate(-10px, 0px);
+}
+100% {
+clip-path: var(--slice-1);
+transform: translate(0);
+}
+}
+
+@media (min-width: 768px) {
+#CV,
+#CV:after {
+width: 200px;
+height: 70px;
+line-height: 58px;
+}
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -839,15 +935,15 @@ a:hover {
 	margin-bottom: 3rem;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	background-color: #fff;
+	background-color: transparent;
 }
-.work-box:hover img {
+.work-box img:hover {
 	transform: scale(1.1);
 }
 
 .work-box {
-	border: solid 0px #d3ba42;
 	transition: border-width 0.6s linear;
+    color: #d3ba42;
 }
 
 .form-control{
@@ -865,28 +961,37 @@ a:hover {
     border: solid 3px #d3ba42;
 }
 
-.work-box:hover {
-	border-width: 4px;
-}
-
 .work-img {
 	display: block;
 	overflow: hidden;
+	border-top: solid 0px #d3ba42;
+	border-right: solid 0px #d3ba42;
+	border-left: solid 0px #d3ba42;
 }
+.work-img:hover {
+	display: block;
+	overflow: hidden;
+	border-top-width: 4px;
+	border-right-width: 4px;
+	border-left-width: 4px;
+	transition: all 1s;
+}
+
 .work-img img {
 	transition: all 1s;
 }
 
-.work-content {
-    background-color: #d3ba42;
+.work-content { 
+    border: 4px solid #d3ba42;
+    background-color: transparent;
     padding: 1rem 0 1rem 1rem;
 }
 .work-content .w-more {
-	color: #4e4e4e;
+	color: #8b8b84;
 	font-size: 0.8rem;
 }
 .work-content .w-more .w-ctegory {
-	    color: black;
+	    color: #c3c3c3;
 }
 .work-content .w-like {
 	font-size: 2.5rem;
