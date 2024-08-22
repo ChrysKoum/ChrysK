@@ -193,9 +193,10 @@ a:hover {
 	margin-bottom: 30px;
   }
   
-  .btn-filter {
-	background-color: #c9aa0c;
-	color: white;
+  .btn.btn-filter {
+	background-color: transparent;
+	border: 1rem solid white;
+	color: rgb(194, 176, 176);
 	margin: 0 5px;
 	border: none;
 	padding: 10px 20px;
@@ -205,7 +206,8 @@ a:hover {
   
   .btn-filter.active,
   .btn-filter:hover {
-	background-color: #b3920b;
+	background-color: #c9aa0c;
+	color:black;
   }
   
  
