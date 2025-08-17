@@ -222,4 +222,19 @@
     const currentYear = new Date().getFullYear();
     document.querySelector(".current-year").textContent = currentYear;
   });
+
+  // Show outdated-site modal once per session
+  window.addEventListener("load", () => {
+    try {
+      const shown = sessionStorage.getItem("outdatedModalShown");
+      const modalEl = document.getElementById("outdatedModal");
+      if (!shown && modalEl && window.bootstrap && window.bootstrap.Modal) {
+        const modal = new window.bootstrap.Modal(modalEl, { backdrop: "static" });
+        modal.show();
+        sessionStorage.setItem("outdatedModalShown", "1");
+      }
+    } catch (e) {
+      // ignore storage errors
+    }
+  });
 })();

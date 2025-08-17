@@ -1216,3 +1216,27 @@ footer .credits {
 footer .credits a {
 	color: #fff;
 }
+
+
+ /* Custom button for outdated modal */
+    .btn-outdated {
+      background-color: #a89618;
+      border-color: #a89618;
+      color: #fff;
+    }
+    /* Bomb timer overlay */
+    #bombTimer {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 15px 20px;
+      font-size: 2rem;
+      border-radius: 8px;
+      z-index: 1055;
+    }
+    #bombTimer span {
+      margin-left: 10px;
+    }

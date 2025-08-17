@@ -49,6 +49,13 @@
 
 <body>
 
+  <noscript>
+    <div class="alert alert-warning text-center m-0" role="alert">
+      This site is outdated. Visit the new website at
+      <a href="https://www.chryskoum.engineer/" class="alert-link" target="_blank" rel="noopener">www.chryskoum.engineer</a>.
+    </div>
+  </noscript>
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex">
@@ -89,7 +96,7 @@
   <main>
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route  style=">
+    <section id="about" class="about-mf sect-pt4 route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -266,7 +273,7 @@
           
           <div class="col-md-4 portfolio-item fullstack">
             <div class="work-box">
-              <a href="https://oramacyprus.org/ target="_blank" data-gallery="portfolioGallery">
+                <a href="https://oramacyprus.org/" target="_blank" data-gallery="portfolioGallery">
                 <div class="work-img">
                   <img src="assets/img/orama.png" alt="Orama project image" class="img-fluid">
                 </div>
@@ -553,6 +560,48 @@
     </div>
   </footer><!-- End  Footer -->
 
+<!-- Outdated Site Modal -->
+  <div class="modal fade" id="outdatedModal" tabindex="-1" aria-labelledby="outdatedModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="outdatedModalLabel">You're viewing an outdated site</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          This website is no longer updated. Please visit my new website:
+          <a href="https://www.chryskoum.engineer/" target="_blank" rel="noopener">www.chryskoum.engineer</a>
+        </div>
+        <div class="modal-footer">
+          <a href="https://www.chryskoum.engineer/" class="btn btn-outdated btn-lg" target="_blank" rel="noopener">Go to new site</a>
+          <button type="button" class="btn btn-secondary" id="continueOldBtn">Continue here</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stay at Your Own Risk Modal -->
+  <div class="modal fade" id="riskModal" tabindex="-1" aria-labelledby="riskModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="riskModalLabel">Stay at Your Own Risk</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          You can stay on this outdated site, but proceed at your own risk. Some features may not work.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" id="proceedOldBtn">Proceed Anyway</button>
+          <a href="https://www.chryskoum.engineer/" class="btn btn-outdated btn-lg" target="_blank" rel="noopener">Take me to the new site</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="bombTimer">💣 Self-destruct in:<span id="countdown">15</span>s</div>
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
@@ -629,6 +678,44 @@
         }
       });
     
+    });
+  </script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize modals
+      var outdatedEl = document.getElementById('outdatedModal');
+      var outdatedModal = new bootstrap.Modal(outdatedEl);
+      var riskEl = document.getElementById('riskModal');
+      var riskModal = new bootstrap.Modal(riskEl);
+
+      // Show the outdated modal on load
+      outdatedModal.show();
+
+      // Continue to risk modal
+      document.getElementById('continueOldBtn').addEventListener('click', function () {
+        outdatedModal.hide();
+        riskModal.show();
+      });
+
+      // Proceed anyway: trigger bomb timer and redirect
+      document.getElementById('proceedOldBtn').addEventListener('click', function () {
+        riskModal.hide();
+        var bombEl = document.getElementById('bombTimer');
+        var countdownEl = document.getElementById('countdown');
+        bombEl.style.display = 'block';
+        var timeLeft = 15;
+        var interval = setInterval(function () {
+          timeLeft--;
+          countdownEl.textContent = timeLeft;
+          if (timeLeft <= 0) {
+            clearInterval(interval);
+            bombEl.textContent = '💥 Boom! Redirecting...';
+            setTimeout(function () {
+              window.location.href = 'https://www.chryskoum.engineer/';
+            }, 1000);
+          }
+        }, 1000);
+      });
     });
   </script>
   
