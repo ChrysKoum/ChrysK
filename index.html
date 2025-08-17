@@ -561,12 +561,11 @@
   </footer><!-- End  Footer -->
 
 <!-- Outdated Site Modal -->
-  <div class="modal fade" id="outdatedModal" tabindex="-1" aria-labelledby="outdatedModalLabel" aria-hidden="true">
+  <div class="modal fade" id="outdatedModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="outdatedModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="outdatedModalLabel">You're viewing an outdated site</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           This website is no longer updated. Please visit my new website:
@@ -581,12 +580,11 @@
   </div>
 
   <!-- Stay at Your Own Risk Modal -->
-  <div class="modal fade" id="riskModal" tabindex="-1" aria-labelledby="riskModalLabel" aria-hidden="true">
+  <div class="modal fade" id="riskModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="riskModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="riskModalLabel">Stay at Your Own Risk</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           You can stay on this outdated site, but proceed at your own risk. Some features may not work.
@@ -680,13 +678,18 @@
     
     });
   </script>
-   <script>
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Initialize modals
+      // Only run once per session
+      try {
+        if (sessionStorage.getItem('outdatedModalFlowDone')) return;
+      } catch (e) {}
+
+      // Initialize non-dismissible modals using existing markup attributes
       var outdatedEl = document.getElementById('outdatedModal');
-      var outdatedModal = new bootstrap.Modal(outdatedEl);
       var riskEl = document.getElementById('riskModal');
-      var riskModal = new bootstrap.Modal(riskEl);
+      var outdatedModal = new bootstrap.Modal(outdatedEl, { backdrop: 'static', keyboard: false });
+      var riskModal = new bootstrap.Modal(riskEl, { backdrop: 'static', keyboard: false });
 
       // Show the outdated modal on load
       outdatedModal.show();
@@ -697,8 +700,13 @@
         riskModal.show();
       });
 
-      // Proceed anyway: trigger bomb timer and redirect
+      // Proceed anyway: hide modals, mark session done, trigger bomb timer
       document.getElementById('proceedOldBtn').addEventListener('click', function () {
+        // Mark as seen for this session
+        try {
+          sessionStorage.setItem('outdatedModalFlowDone', '1');
+        } catch (e) {}
+
         riskModal.hide();
         var bombEl = document.getElementById('bombTimer');
         var countdownEl = document.getElementById('countdown');
